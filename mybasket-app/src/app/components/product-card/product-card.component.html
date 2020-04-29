@@ -1,0 +1,23 @@
+<div class="card mb-4 product-block">
+  <img
+    class="card-img-top"
+    [src]="product.picture"
+    [routerLink]="['/details', product.id]"
+    [alt]="product.description"
+  />
+  <div class="caption">
+    <div class="card-body text-center">
+      <h3 class="card-title">{{ product.description }}</h3>
+      <p class="prod-desc-text">{{ product.quantity_per_unit }}</p>
+      <p class="price">{{ product.unit_price | currency: "INR" }}</p>
+      <div class="sale-badge">{{ product.discount }} %</div>
+      <!-- <p class="card-text">Discount {{ product.discount }} %</p> -->
+      <!-- button.btn.btn-primary.btn-block{Add to Cart} -->
+      <!-- <button class="btn btn-primary btn-block">Add to Cart</button> -->
+      <!-- <mb-add-to-cart-button [product]="product"></mb-add-to-cart-button> -->
+    </div>
+    <p class="product-view" [routerLink]="['/details', product.id]">
+      Quick View <i class="fa fa-angle-right" aria-hidden="true"></i>
+    </p>
+  </div>
+</div>

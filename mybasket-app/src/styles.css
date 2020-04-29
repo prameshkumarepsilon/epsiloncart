@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Gotham-Book";
+  src: url("assets/fonts/gotham/Gotham-Book.eot");
+  src: url("assets/fonts/gotham/Gotham-Book.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/gotham/Gotham-Book.woff2") format("woff2"),
+    url("assets/fonts/gotham/Gotham-Book.woff") format("woff"),
+    url("assets/fonts/gotham/Gotham-Book.ttf") format("truetype"),
+    url("assets/fonts/gotham/Gotham-Book.svg#Gotham-Book") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("assets/fonts/gotham/Gotham-Bold.eot");
+  src: url("assets/fonts/gotham/Gotham-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/gotham/Gotham-Bold.woff2") format("woff2"),
+    url("assets/fonts/gotham/Gotham-Book.woff") format("woff"),
+    url("assets/fonts/gotham/Gotham-Book.ttf") format("truetype"),
+    url("assets/fonts/gotham/Gotham-Book.svg#Gotham-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Gotham-Book";
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+.menu {
+  background: black;
+}
+.logo {
+  max-width: 100px;
+}
+.clickable {
+  cursor: pointer;
+  outline: none;
+}
+.navbar-dark .header-element .nav-link {
+  color: #ffffff;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.add-to-cart,
+.add-to-cart:hover {
+  background-color: #00af66;
+  border-radius: 0px;
+  padding: 13px 50px 13px 50px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 0.67;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Gotham-Bold";
+  margin-bottom: 10px;
+}
+.continue-shopping,
+.continue-shopping:hover,
+.continue-shopping:focus {
+  background-color: #666666;
+  border-radius: 0px;
+  padding: 13px 15px 13px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 0.67;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Gotham-Bold";
+}
+.product-popup .plus-minus-input {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.product-popup .plus-minus-input .input-group-field {
+  text-align: center;
+  width: 30px;
+}
+
+.product-popup .plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.product-popup
+  .plus-minus-input
+  .input-group-field
+  ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.product-popup .plus-minus-input .input-group-button .circle {
+  border-radius: 0%;
+  padding: 4px 8px 3px 8px;
+}
+
+.product-popup .input-group {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.product-popup .input-group > :first-child {
+  border-radius: 0 0 0 0;
+}
+
+.product-popup .input-group-button {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.product-popup .button.hollow,
+.product-popup .button.hollow:hover,
+.product-popup .button.hollow:focus {
+  background-color: #666666;
+}
+
+.product-popup .button.hollow {
+  border: 1px solid #666666;
+  color: #ffffff;
+}
+.sub-menu .navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+.caption .card-title {
+  display: -webkit-box;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  width: 100%;
+  padding: 0 15px 0 15px;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 0;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.prod-desc-text {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.caption .card-body {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

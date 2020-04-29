@@ -1,0 +1,24 @@
+{
+  "header": {
+    "title": "My Basket App",
+    "tagline": "Super saver app",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "welcome": "Welcome"
+  },
+  "sidebar": {
+    "by_cat": "Product by category",
+    "by_brand": "Product by brand",
+    "view_order": "Your order history",
+    "view_profile": "View/edit Profile"
+  },
+  "language": {
+    "english": "English",
+    "spanish": "Spanish",
+    "kanada": "kannada"
+  },
+  "login": {
+    "title": "Existing customers login here"
+  }
+}

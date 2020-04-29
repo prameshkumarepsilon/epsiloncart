@@ -1,0 +1,57 @@
+<!-- In a boolean context, following are considered as false: -->
+<!-- undefined, null, 0, '', false -->
+<div class="text-center" *ngIf="product === undefined && found === undefined">
+  <img src="/assets/images/loading.gif" alt="" />
+</div>
+<div *ngIf="found !== undefined && found === false">
+  <h3 class="text-danger text-center">No product found!</h3>
+</div>
+<div class="row" *ngIf="found !== undefined && found === true">
+  <div class="col-12 col-sm-8 col-md-7">
+    <img
+      [src]="product.picture"
+      [alt]="product.description"
+      class="img img-responsive w-75"
+    />
+  </div>
+  <div class="col-12 col-sm-4 col-md-5">
+    <table class="table">
+      <tr>
+        <td>Name</td>
+        <td>{{ product.name }}</td>
+      </tr>
+      <tr>
+        <td>Description</td>
+        <td>{{ product.description }}</td>
+      </tr>
+      <tr>
+        <td>Unit Price</td>
+        <td>Rs. {{ product.unit_price }}</td>
+      </tr>
+
+      <tr>
+        <td>Brand</td>
+        <td>{{ product.brand }}</td>
+      </tr>
+      <tr>
+        <td>Category</td>
+        <td>{{ product.category }}</td>
+      </tr>
+      <tr>
+        <td>Quantity Per Unit</td>
+        <td>{{ product.quantity_per_unit }}</td>
+      </tr>
+      <tr>
+        <td>discount</td>
+        <td>{{ product.discount }}%</td>
+      </tr>
+    </table>
+
+    <div class="add-to-product">
+      <mb-add-to-cart-button [product]="product"></mb-add-to-cart-button>
+    </div>
+    <div class="see-product-details" routerLink="/">
+      <button class="btn continue-shopping">Continue Shopping</button>
+    </div>
+  </div>
+</div>

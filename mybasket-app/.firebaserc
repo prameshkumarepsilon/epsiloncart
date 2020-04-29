@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "epsiloncart": {
+      "hosting": {
+        "mybasket-app": [
+          "epsiloncart"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "epsiloncart"
+  }
+}

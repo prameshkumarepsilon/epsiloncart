@@ -1,0 +1,46 @@
+<button *ngIf="!inCart" (click)="increment()" class="btn add-to-cart">
+  Add To Cart
+</button>
+
+<!-- <div class="row" *ngIf="inCart">
+  <div class="col text-center">
+    <button (click)="decrement()" class="btn btn-danger btn-block">-</button>
+  </div>
+  <div class="col-text-center">{{ quantity }}</div>
+  <div class="col text-center">
+    <button (click)="increment()" class="btn btn-success btn-block">+</button>
+  </div>
+</div> -->
+
+<div class="product-popup" *ngIf="inCart">
+  <div class="input-group plus-minus-input">
+    <div class="input-group-button">
+      <button
+        (click)="decrement()"
+        type="button"
+        class="button hollow circle"
+        data-quantity="minus"
+        data-field="quantity"
+      >
+        <i class="fa fa-minus" aria-hidden="true"></i>
+      </button>
+    </div>
+    <input
+      class="input-group-field"
+      type="text"
+      name="quantity"
+      value="{{ quantity }}"
+    />
+    <div class="input-group-button">
+      <button
+        (click)="increment()"
+        type="button"
+        class="button hollow circle"
+        data-quantity="plus"
+        data-field="quantity"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</div>

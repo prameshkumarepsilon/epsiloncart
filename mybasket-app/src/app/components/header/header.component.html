@@ -1,0 +1,199 @@
+<!-- .alert.alert-primary>h1{MyBasket v1.0} -->
+<div class="sub-menu">
+  <nav class="navbar navbar-expand-lg navbar-dark menu fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">
+        <img
+          class="logo"
+          src="../../../assets/images/ep-logo.png"
+          width="100"
+          alt=""
+        />
+      </a>
+
+      <div class="d-flex order-lg-1 menu-margin-left">
+        <!-- <a href="#" class="navbar-text"
+          ><i class="fa fa-search" aria-hidden="true"></i
+        ></a> -->
+        <!-- <div class="search">
+          <form autocomplete="on">
+            <input
+              id="search"
+              (keyup)="search()"
+              type="search"
+              class="form-control"
+              name="qryTxt"
+              [(ngModel)]="qryTxt"
+              placeholder="Search item"
+              autofocus
+            /><input id="search_submit" value="Rechercher" type="submit" />
+          </form>
+        </div> -->
+        <ul class="navbar-nav flex-row">
+          <li *ngIf="cs.itemCount">
+            <a class="nav-item nav-link" routerLink="/view-cart"
+              ><span class="pro-count">{{ cs.itemCount }}</span
+              ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li class="nav-item mx-2 mx-lg-0" *ngIf="!auth.isAuthenticated">
+            <button class="btn btn-link" routerLink="/customer/login">
+              {{ "header.login" | translate }}</button
+            >|
+            <button class="btn btn-link" routerLink="/customer/register">
+              {{ "header.register" | translate }}
+            </button>
+          </li>
+          <li *ngIf="auth.isAuthenticated">
+            <button class="btn btn-link ">
+              {{ "header.welcome" | translate }} {{ auth.loggedInUser }}
+            </button>
+            |
+            <button (click)="auth.logout()" class="btn btn-link">
+              {{ "header.logout" | translate }}
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <button
+        class="navbar-toggler order-first"
+        type="button"
+        data-toggle="collapse"
+        data-target="#links"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+      <mb-sidebar></mb-sidebar>
+      <!-- <div class="collapse navbar-collapse" id="links">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Brand
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#"> Fresho </a>
+              <a class="dropdown-item" href="#"> Malnad </a>
+              <a class="dropdown-item" href="#"> Zespri </a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#"> Vegitable </a>
+              <a class="dropdown-item" href="#"> Fruit </a>
+              <a class="dropdown-item" href="#"> Beverages </a>
+            </div>
+          </li>
+
+          <mb-sidebar></mb-sidebar>
+          <li class="nav-item" *ngIf="auth.isAuthenticated">
+            <a class="nav-link" href="#" routerLink="/customer/view-orders"
+              >View orders</a
+            >
+          </li>
+        </ul>
+      </div> -->
+    </div>
+  </nav>
+</div>
+<br />
+<br />
+
+<!-- <div class="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <button
+      type="button"
+      class="navbar-toggler"
+      data-toggle="collapse"
+      data-target="#navbarCollapse"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="clickable" routerLink="/">
+            <img class="logo" src="../../../assets/images/ep-logo.png" alt="" />
+          </a>
+        </li>
+      </ul>
+      <div class="search">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <form>
+              <input
+                (keyup)="search()"
+                type="search"
+                class="form-control"
+                name="qryTxt"
+                [(ngModel)]="qryTxt"
+                placeholder="Search item"
+                autofocus
+              />
+            </form>
+          </li>
+          <li>
+            <button (click)="changeLang('en')" class="btn btn-link">
+              {{ "language.english" | translate }}
+            </button>
+            <button (click)="changeLang('sp')" class="btn btn-link">
+              {{ "language.spanish" | translate }}
+            </button>
+            <button (click)="changeLang('kn')" class="btn btn-link">
+              {{ "language.kanada" | translate }}
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="navbar-nav ml-auto header-element">
+          <li *ngIf="cs.itemCount">
+            <a class="nav-item nav-link" routerLink="/view-cart"
+              ><span class="pro-count">{{ cs.itemCount }}</span
+              ><i class="fa fa-shopping-cart" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li *ngIf="!auth.isAuthenticated">
+            <button class="btn btn-link" routerLink="/customer/login">
+              {{ "header.login" | translate }}
+            </button>
+            |
+            <button class="btn btn-link" routerLink="/customer/register">
+              {{ "header.register" | translate }}
+            </button>
+          </li>
+          <li *ngIf="auth.isAuthenticated">
+            <button class="btn btn-link">
+              {{ "header.welcome" | translate }} {{ auth.loggedInUser }}
+            </button>
+            |
+            <button (click)="auth.logout()" class="btn btn-link">
+              {{ "header.logout" | translate }}
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div> -->

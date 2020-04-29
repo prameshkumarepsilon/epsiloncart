@@ -1,0 +1,49 @@
+.sale-badge {
+  background: #bb1155;
+  position: absolute;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 10px;
+  color: #fff;
+  padding: 15px 15px;
+  top: 0px;
+  left: 0px;
+  width: 70px;
+  height: 54px;
+}
+
+.product-view {
+  background-color: #e2e2e2;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #1d4094;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product-block img {
+  cursor: pointer;
+}
+
+.price {
+  font-family: "Gotham-Bold";
+  font-size: 20px;
+  color: #666666;
+  margin-bottom: 0px;
+}
+
+.caption h3 {
+  font-size: 20px;
+  color: #666666;
+}
+
+.product-view:hover {
+  text-decoration: underline;
+}
+
+.product-block .card-img-top {
+  min-height: 260px;
+  max-height: 260px;
+}
